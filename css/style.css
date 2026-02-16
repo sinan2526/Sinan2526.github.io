@@ -5,8 +5,12 @@ section {
   scroll-margin-top: 120px;
 }
 
-html, body {
-  overflow-x: hidden;
+
+html{
+    overflow: visible !important;
+}
+body {
+  overflow-x: hidden !important;
 }
 
 
@@ -39,7 +43,7 @@ body {
 
 /* The class we'll toggle with JS to make it bigger */
 .custom-cursor.grow {
-  transform: translate(-50%, -50%) scale(4);
+  transform: translate(-50%, -50%) scale(2);
 }
 
 
