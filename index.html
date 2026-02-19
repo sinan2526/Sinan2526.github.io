@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -53,17 +54,17 @@
             <div class="row hero">
                 <div class="col-md-6">
                     <div class="hero-cnt">
-                        <div class="heading1">
+                        <div class="heading1" data-aos="fade-right" data-aos-duration="1000">
                             <h1> <span>I'm</span>Sinan,</h1>
                         </div>
-                        <div class="heading2">
+                        <div class="heading2" data-aos="fade-right" data-aos-duration="1200">
                             <h4>A UI/UX designer focused on creating simple, user-friendly interfaces</h4>
                             <h6>Currently building strong foundations through structured learning and hands-on practice
                                 projects.
                             </h6>
                         </div>
 
-                        <div class="social-card">
+                        <div class="social-card" data-aos="fade-up" data-aos-duration="1300">
                             <p>You May Have Seen Me In :</p>
                             <div class="platforms_img">
                                 <a href="https://wa.me/qr/CLOXICLDGW22L1"><img src="IMG/whatsapp.png" alt=""></a>
@@ -78,13 +79,13 @@
                             </div>
                         </div>
                     </div>
-                    <p class="disclaimer">This portfolio showcases conceptual and practice work created as part of my
+                    <!-- <p class="disclaimer" data-aos="fade-in" data-aos-duration="1300">This portfolio showcases conceptual and practice work created as part of my
                         learning
-                        journey in UI/UX design and front-end development.</p>
+                        journey in UI/UX design and front-end development.</p> -->
                 </div>
                 <div class="col-md-6">
                     <div class="bg-blur"></div>
-                    <div class="hero-img">
+                    <div class="hero-img" data-aos="fade-left" data-aos-duration="1000">
                         <img src="IMG/pic1.png" class="profile" alt="image" width="320px">
                         <div class="social">
                         </div>
@@ -98,7 +99,7 @@
         <div class="bg-radial2"></div>
         <div class="container">
             <!-- <div class="bg-layer"></div> -->
-            <div class="about_card">
+            <div class="about_card" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="500">
                 <div class="about_img">
                     <img src="IMG/pic2.png" alt="image" width="310px">
                 </div>
@@ -153,13 +154,27 @@
                 </div>
                 <hr class="divider">
                 <div class="apps">
-                    <img src="IMG/figma.png" alt="" class="glow" style="--glow-color:#F5725E;" width="86px">
-                    <img src="IMG/affinity.png" alt="" class="glow" style="--glow-color:#B5FF7E;" width="86px">
-                    <img src="IMG/ps.svg" alt="" class="glow" style="--glow-color:#30A7FD;" width="86px">
-                    <img src="IMG/html.png" alt="" class="glow" style="--glow-color:#FD7716;" width="86px">
-                    <img src="IMG/css.png" alt="" class="glow" style="--glow-color:#c38bfb;" width="86px">
-                    <img src="IMG/js.png" alt="" class="glow" style="--glow-color:#FFDF00;" width="86px">
-                    <img src="IMG/bootstrap.png" alt="" class="glow" style="--glow-color:#8E12FD;" width="126px">
+                    <div class="figma" data-aos="fade-up" data-aos-duration="600">
+                        <img src="IMG/figma.png" alt="" class="glow" style="--glow-color:#F5725E;" width="86px">
+                    </div>
+                    <div class="affinity"  data-aos="fade-up" data-aos-duration="700">
+                        <img src="IMG/affinity.png" alt="" class="glow" style="--glow-color:#B5FF7E;" width="86px">
+                    </div>
+                    <div class="ps"  data-aos="fade-up" data-aos-duration="900">
+                        <img src="IMG/ps.svg" alt="" class="glow" style="--glow-color:#30A7FD;" width="86px">
+                    </div>
+                    <div class="html"  data-aos="fade-up" data-aos-duration="1100">
+                        <img src="IMG/html.png" alt="" class="glow" style="--glow-color:#FD7716;" width="86px">
+                    </div>
+                    <div class="css"  data-aos="fade-up" data-aos-duration="1300">
+                        <img src="IMG/css.png" alt="" class="glow" style="--glow-color:#c38bfb;" width="86px">
+                    </div>
+                  <div class="js" data-aos="fade-up" data-aos-duration="1500">
+                      <img src="IMG/js.png" alt="" class="glow" style="--glow-color:#FFDF00;" width="86px">
+                  </div>
+                    <div class="bootstrap" data-aos="fade-up" data-aos-duration="1700">
+                        <img src="IMG/bootstrap.png" alt="" class="glow" style="--glow-color:#8E12FD;" width="126px">
+                    </div>
                 </div>
             </div>
         </div>
@@ -206,14 +221,14 @@
             </div>
             <div class="mob-title">
                 <h2>App Design</h2>
-            <div class="mobile-design">
-                <img src="IMG/mockups/Mobile Design/mockup4.png" alt="">
-                <img src="IMG/mockups/Mobile Design/workout.png" alt="">
-                <img src="IMG/mockups/Mobile Design/paul.png" alt="">
-                <img src="IMG/mockups/Mobile Design/sophia.png" alt="">
-                <img src="IMG/mockups/Mobile Design/happy.png" alt="">
-            </div>
-            
+                <div class="mobile-design">
+                    <img src="IMG/mockups/Mobile Design/mockup4.png" alt="">
+                    <img src="IMG/mockups/Mobile Design/workout.png" alt="">
+                    <img src="IMG/mockups/Mobile Design/paul.png" alt="">
+                    <img src="IMG/mockups/Mobile Design/sophia.png" alt="">
+                    <img src="IMG/mockups/Mobile Design/happy.png" alt="">
+                </div>
+
             </div>
         </div>
     </section>
@@ -309,6 +324,10 @@
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('.web-design').slick({

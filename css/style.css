@@ -259,7 +259,7 @@ img.github {
     bottom: -5vh;
  } */
 
- p.disclaimer {
+ /* p.disclaimer {
     position: static;
     max-width: 575px;
     text-align: center;
@@ -267,7 +267,7 @@ img.github {
     font-weight: 300;
     margin-top: 30px;
     opacity: 0.6;
-}
+} */
 
 
 .bg-blur {
