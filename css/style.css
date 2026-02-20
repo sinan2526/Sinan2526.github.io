@@ -80,13 +80,13 @@ ul {
     padding: 15px 0;
 }
 
-ul li a {
+ul li a.li{
     color: #CBCBCB;
     list-style: none;
     transition: 300ms ease;
 }
 
-ul li a:hover {
+ul li a.li:hover {
     background: #ffb049;
     padding: 10px 15px;
     border-radius: 20px;
@@ -512,7 +512,7 @@ section#contact {
     width: 502px;
     height: 493px;
     background-image: radial-gradient(#ffb656, #00000000);
-    z-index: -1;
+    z-index: 0;
     right: -25px;
     bottom: -278px;
     border-radius: 100%;
@@ -616,7 +616,7 @@ textarea {
 
 /* footer */
 
-footer a{
+/* footer a{
     text-decoration: none;
     color: #CBCBCB;
 }
@@ -656,7 +656,7 @@ p.copyright {
     align-items: center;
     gap: 20px;
     font-size: 14px;
-}
+} */
 
 /* .footer-content {
     display: flex;
@@ -667,7 +667,7 @@ p.copyright {
     gap: 320px;
 } */
 
-.footer-content {
+/* .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -687,7 +687,7 @@ footer .container {
 .hire2 {
     font-size: 16px;
     text-decoration: underline;
-}
+} */
 
 
 /* work  */
@@ -824,4 +824,81 @@ section#works{
     background: linear-gradient(97deg, rgba(255, 176, 73, 1) 0%, rgba(255, 255, 255, 1) 100%);
     background-clip: text;
     color: transparent;
+}
+
+
+/* footer ai */
+
+.contact-info a{
+    color: #6c757d; /* Bootstrap text-secondary */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover{
+    color: #ffffff;
+}
+
+
+/* General Footer Styling */
+.portfolio-footer {
+    font-family: 'Inter', -apple-system, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scroll from large text */
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #CBCBCB;
+}
+
+.footer-text {
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.footer-tagline {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #CBCBCB;
+    margin-top: 110px;
+}
+
+/* Link Styling */
+.portfolio-footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-footer ul li a {
+    color: #6c757d; /* Bootstrap text-secondary */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio-footer ul li a:hover {
+    color: #ffffff;
+}
+
+/* Massive Branding Text */
+.footer-branding {
+    font-size: 24vw; /* Scales with screen width */
+    font-weight: 900;
+    color: #df9e38; /* Your Figma orange/gold */
+    line-height: 0.8;
+    margin: 0;
+    text-transform: lowercase;
+    letter-spacing: -0.05em;
+    user-select: none;
+    margin-top: 6px;
+}
+
+/* Small adjustments for mobile */
+@media (max-width: 768px) {
+    .footer-branding {
+        font-size: 28vw;
+        margin-top: 2rem;
+    }
 }
