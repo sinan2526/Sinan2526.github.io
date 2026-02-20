@@ -758,6 +758,7 @@ section#works{
 
 .design-cards {
     padding: 8px;
+    transition: 300ms ease;
 }
 
 .slick-prev {
@@ -826,6 +827,59 @@ section#works{
     color: transparent;
 }
 
+.design-cards:hover{
+    transform: scale(1.02);
+}
+
+
+
+/* 1. The wrapper that clips the overlay to the image size */
+.card-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Adjust to match your design */
+}
+
+/* 2. The overlay anchored to the bottom-left */
+.card-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    
+    /* Gradient makes text readable without covering the whole image */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes content to the bottom */
+    align-items: flex-start;    /* Aligns content to the left */
+    
+    opacity: 0;
+    transition: 400ms ease;
+    pointer-events: none; /* Allows clicks to pass through to the slider if needed */
+}
+
+/* 3. The Hover Trigger */
+.design-cards:hover .card-overlay {
+    opacity: 1;
+}
+
+/* 4. Text inside the overlay */
+.card-overlay h5 {
+    color: #FFB049;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.card-overlay p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 5px 0 0 0;
+}
+
 
 /* footer ai */
 
@@ -839,6 +893,9 @@ section#works{
     color: #ffffff;
 }
 
+.connect{
+    z-index: 1;
+}
 
 /* General Footer Styling */
 .portfolio-footer {
