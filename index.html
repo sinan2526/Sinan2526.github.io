@@ -324,20 +324,20 @@
                     <h2>Interested in my work or want to connect?</h2>
                     <p>I'm open to feedback, learning opportunities, and entry-level collaborations.</p>
                 </div>
-                <form action="https://api.web3forms.com/submit" method="POST">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="1b2ab9a5-50e9-4efc-ab98-d0dd5a3d820c">
                     <div class="form-grid">
                         <div class="input-group">
                             <label>First Name</label>
-                            <input type="text" name="first_name" placeholder="Enter your first name">
+                            <input type="text" name="first_name" placeholder="Enter your first name" required>
                         </div>
                         <div class="input-group">
                             <label>Last Name</label>
-                            <input type="text" name="last_name" placeholder="Enter your last name">
+                            <input type="text" name="last_name" placeholder="Enter your last name" required>
                         </div>
                         <div class="input-group">
                             <label>Email</label>
-                            <input type="email" name="email" placeholder="Enter your email">
+                            <input type="email" name="email" placeholder="Enter your email" required>
                         </div>
                         <div class="input-group">
                             <label>Phone</label>
@@ -347,10 +347,11 @@
 
                     <div class="input-group full-width">
                         <label>Message</label>
-                        <textarea rows="5" name="Message" placeholder="Share your thoughts here..."></textarea>
+                        <textarea rows="5" name="Message" placeholder="Share your thoughts here..." required></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">Submit</button>
+                    <p id="result-message" style="margin-top: 15px; font-weight: bold;"></p>
                 </form>
             </div>
         </div>
