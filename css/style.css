@@ -6,10 +6,7 @@ section {
 }
 
 
-html{
-    overflow: visible !important;
-}
-body {
+html, body {
   overflow-x: hidden !important;
 }
 
