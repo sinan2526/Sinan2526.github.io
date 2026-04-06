@@ -1,0 +1,280 @@
+/* General Base Styles */
+body {
+    /* Very dark brownish-black background as shown in the design */
+    background-color: #0b0705; 
+    background: radial-gradient(circle at top right, #1a120b 0%, #050403 70%);
+    color: #e5d7c3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Typography styles matching the handwriting effect */
+.section-title {
+    font-family: 'Caveat', cursive;
+    font-size: 4.5rem;
+    color: #e4bb6e; /* Yellow-gold color matching the original */
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.title-container {
+    display: inline-block;
+    padding-right: 40px; /* Room for the arrow */
+}
+
+/* Emulating the hand-drawn curly arrow pointing from the Title to the mockups */
+.title-arrow {
+    position: absolute;
+    right: -20px;
+    bottom: -50px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(5deg);
+    pointer-events: none;
+    /* Soft glowing trail effect on the arrow if desired, though design is solid */
+    filter: drop-shadow(0 0 2px rgba(213, 184, 113, 0.4));
+}
+
+/* Grid layout specific utilities */
+/* Creating the vertical offset between columns as seen in the design */
+@media (min-width: 768px) {
+    .stagger-down {
+        margin-top: 100px;
+    }
+}
+
+.web-item {
+    max-width: 480px; /* Setting a nice max width to maintain aspect ratio and dimensions similar to the image */
+    width: 100%;
+}
+
+/* App Card styling */
+.web-card {
+    border: 1px solid #7c5825; /* Bronze / Gold border */
+    border-radius: 20px;
+    background-color: #050403; /* Inner dark border before rendering the image */
+    padding: 3px; /* Simulating the slight gap between border and image if any, or just structural pad */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    /* Adding nice transitions for hover effects */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    /* Removed portrait aspect ratio, let browser resize */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.web-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 17px; /* A pixel or two less than the parent to fit snuggly inside */
+    transition: transform 0.6s ease;
+}
+
+/* Hover effects for User Experience */
+.web-item:hover .web-card {
+    transform: translateY(-12px) scale(1.02);
+    /* Enhancing shadow to create a lifting effect with a slight golden glow */
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.8), 0 0 20px rgba(228, 187, 110, 0.15);
+    border-color: #e4bb6e; /* Border brightens up */
+}
+
+.web-item:hover .web-card img {
+    transform: scale(1.03); /* Gentle scale on image inside */
+}
+
+/* Gallery Overlay for clickable cards */
+.web-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 4, 3, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 17px;
+    z-index: 10;
+}
+
+.web-item:hover .web-card-overlay {
+    opacity: 1;
+}
+
+.web-card-overlay span {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: #e4bb6e;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 2px solid #e4bb6e;
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.web-item:hover .web-card-overlay span {
+    transform: translateY(0);
+}
+
+/* App Information / Description styling */
+.web-info {
+    text-align: left;
+    margin-top: 1.5rem;
+    padding-left: 0.5rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.web-item:hover .web-info {
+    transform: translateY(5px);
+}
+
+.web-title {
+    font-family: 'Caveat', cursive;
+    color: #e4bb6e;
+    font-size: 2.3rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.web-desc {
+    font-family: 'Caveat', cursive;
+    font-size: 1.35rem;
+    color: #a69e90;
+    line-height: 1.25;
+    max-width: 95%;
+    margin-bottom: 0;
+}
+
+/* -----------------------------------------
+   Comprehensive Responsive Adjustments 
+   ----------------------------------------- */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .web-item {
+        max-width: 95%; /* Vastly expanded for web layout screenshots */
+        margin: 0 auto 2rem auto;
+    }
+    .section-title {
+        font-size: 3rem;
+    }
+    .title-container {
+        padding-right: 25px;
+    }
+    .title-arrow {
+        right: -5px;
+        bottom: -35px;
+        width: 50px;
+        height: 50px;
+    }
+    .web-title {
+        font-size: 1.8rem;
+    }
+    .web-desc {
+        font-size: 1.1rem;
+    }
+    .web-card-overlay span {
+        font-size: 1.6rem;
+        padding: 5px 15px;
+    }
+    .stagger-down {
+        margin-top: 0; /* Reset stagger on very small blocks */
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .web-item {
+        max-width: 85%;
+        margin: 0 auto 3rem auto;
+    }
+    .section-title {
+        font-size: 3.8rem;
+    }
+    .title-arrow {
+        right: -10px;
+        bottom: -40px;
+        width: 60px;
+        height: 60px;
+    }
+    .stagger-down {
+        margin-top: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .web-item {
+        max-width: 100%; /* Spans the entire col-md-6 naturally */
+        padding: 0 15px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .web-item {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .section-title {
+        font-size: 4.8rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .web-item {
+        max-width: 95%; /* Slight tuck for ultra-wide */
+    }
+    .section-title {
+        font-size: 5.5rem;
+    }
+    .web-title {
+        font-size: 2.8rem;
+    }
+    .web-desc {
+        font-size: 1.6rem;
+    }
+    .title-arrow {
+        right: -30px;
+        bottom: -60px;
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Modal Gallery Premium Styling */
+.modal-content.dark-theme-modal {
+    background-color: #0b0705;
+    border: 1px solid #7c5825;
+    border-radius: 20px;
+}
+
+.modal-header.dark-theme-modal-header {
+    border-bottom: 1px solid rgba(124, 88, 37, 0.4);
+}
+
+.gallery-grid-img {
+    border-radius: 12px;
+    border: 1px solid rgba(228, 187, 110, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8), 0 0 15px rgba(228, 187, 110, 0.3);
+    border-color: #e4bb6e;
+    z-index: 2;
+    position: relative;
+}
