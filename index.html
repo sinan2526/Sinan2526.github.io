@@ -500,25 +500,32 @@
 
     <script>
         $(document).ready(function () {
-            const $cursor = $('.custom-cursor');
+            // Only initialize custom cursor on devices with a precise pointer (desktop mouse)
+            // This prevents mobile browsers from requiring a "double tap" on buttons due to hover listeners
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const $cursor = $('.custom-cursor');
 
-            // 1. Move the cursor 📍
-            $(document).on('mousemove', function (e) {
-                $cursor.css({
-                    left: e.clientX + 'px',
-                    top: e.clientY + 'px'
+                // 1. Move the cursor 📍
+                $(document).on('mousemove', function (e) {
+                    $cursor.css({
+                        left: e.clientX + 'px',
+                        top: e.clientY + 'px'
+                    });
                 });
-            });
 
-            // 2. Trigger the "grow" effect on everything 🎈
-            $('a, button, input, textarea, .apps, .web-design, .mobile-design').hover(
-                function () {
-                    $cursor.addClass('grow');
-                },
-                function () {
-                    $cursor.removeClass('grow');
-                }
-            );
+                // 2. Trigger the "grow" effect on everything 🎈
+                $('a, button, input, textarea, .apps, .web-design, .mobile-design').hover(
+                    function () {
+                        $cursor.addClass('grow');
+                    },
+                    function () {
+                        $cursor.removeClass('grow');
+                    }
+                );
+            } else {
+                // Completely remove from DOM on responsive/touch devices
+                $('.custom-cursor').remove();
+            }
         });
     </script>
 
