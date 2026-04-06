@@ -156,13 +156,51 @@ body {
     margin-bottom: 0;
 }
 
-/* Mobile responsive adjustments */
-@media (max-width: 767.98px) {
+/* -----------------------------------------
+   Comprehensive Responsive Adjustments 
+   ----------------------------------------- */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
     .app-item {
-        max-width: 350px;
+        max-width: 300px;
+        margin-bottom: 1rem;
     }
     .section-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+    .title-container {
+        padding-right: 25px;
+    }
+    .title-arrow {
+        right: -5px;
+        bottom: -35px;
+        width: 50px;
+        height: 50px;
+    }
+    .app-title {
+        font-size: 1.8rem;
+    }
+    .app-desc {
+        font-size: 1.1rem;
+    }
+    .app-card-overlay span {
+        font-size: 1.6rem;
+        padding: 5px 15px;
+    }
+    .stagger-down {
+        margin-top: 0; /* Reset stagger on very small blocks */
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .app-item {
+        max-width: 360px;
+        margin-bottom: 2rem;
+    }
+    .section-title {
+        font-size: 3.8rem;
     }
     .title-arrow {
         right: -10px;
@@ -170,9 +208,47 @@ body {
         width: 60px;
         height: 60px;
     }
-    /* Provide extra spacing between centered items stacked on mobile */
+    .stagger-down {
+        margin-top: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
     .app-item {
-        margin-bottom: 2rem;
+        max-width: 340px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .app-item {
+        max-width: 400px;
+    }
+    .section-title {
+        font-size: 4.8rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .app-item {
+        max-width: 480px; 
+    }
+    .section-title {
+        font-size: 5.5rem;
+    }
+    .app-title {
+        font-size: 2.8rem;
+    }
+    .app-desc {
+        font-size: 1.6rem;
+    }
+    .title-arrow {
+        right: -30px;
+        bottom: -60px;
+        width: 90px;
+        height: 90px;
     }
 }
 
