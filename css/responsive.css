@@ -9,6 +9,17 @@ img {
   height: auto;
 }
 
+/* Disable custom cursor on touch screens and mobile devices */
+@media (pointer: coarse), (max-width: 768px) {
+  body {
+    cursor: auto !important;
+  }
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
+
 /* ================================================= */
 /* ================== MOBILE ≤ 500px =============== */
 /* ================================================= */

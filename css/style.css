@@ -122,6 +122,7 @@ a.hire:hover{
     top: -217px;
     border-radius: 100%;
     filter: blur(120px) opacity(0.3);
+    pointer-events: none;
 }
 
 header {
@@ -280,6 +281,7 @@ img.github {
     top: 175px;
     border-radius: 100%;
     filter: blur(120px) opacity(0.8);
+    pointer-events: none;
 }
 
 
@@ -315,6 +317,7 @@ section#about {
     opacity: 0.3;
     left: -45px;
     top: 737px;
+    pointer-events: none;
 }
 
 .bg-radial2 {
@@ -327,6 +330,7 @@ section#about {
     opacity: 0.3;
     right: 1px;
     bottom: -703px;
+    pointer-events: none;
 }
 
 
@@ -393,6 +397,7 @@ section#skills {
     top: -169px;
     border-radius: 100%;
     filter: blur(120px) opacity(0.3);
+    pointer-events: none;
 }
 
 /* Remove fixed container width */
@@ -517,6 +522,7 @@ section#contact {
     bottom: -278px;
     border-radius: 100%;
     filter: blur(180px) opacity(0.3);
+    pointer-events: none; /* Prevents blur from capturing clicks */
 }
 
 .contact-card {
@@ -528,6 +534,8 @@ section#contact {
     margin: auto;
     text-align: center;
     color: #CBCBCB;
+    position: relative;
+    z-index: 0; /* Lifts the card above any background radials or blur */
 }
 
 .contact-title {
@@ -708,6 +716,7 @@ section#works{
     top: 524px;
     border-radius: 100%;
     filter: blur(165px) opacity(0.38);
+    pointer-events: none;
 }
 .bg-blur6 {
     position: absolute;
@@ -719,6 +728,7 @@ section#works{
     top: -264px;
     border-radius: 100%;
     filter: blur(190px) opacity(0.38);
+    pointer-events: none;
 }
 
 .bg-blur5 {
@@ -731,6 +741,7 @@ section#works{
     bottom: -288px;
     border-radius: 100%;
     filter: blur(180px) opacity(0.38);
+    pointer-events: none;
 }
 
 .work-head {
