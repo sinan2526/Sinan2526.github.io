@@ -548,7 +548,31 @@
             }
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/g5368cx-0bA5VbH0z8v2Dq+kRND0i0M1vT7vA492oB0qB1K6B6v0F3pM0nZ6F2J9Z2m0Z0P2q4lG2X9m3Ew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".design-cards, .glow, .platforms_img img"), {
+            max: 15,
+            speed: 400,
+            scale: 1.05,
+            glare: true,
+            "max-glare": 0.2
+        });
+    </script>
+    <!-- Lenis for smooth momentum scrolling -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
 
+        // Ensure anchor links scroll smoothly with Lenis
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                lenis.scrollTo(this.getAttribute('href'));
+            });
+        });
+    </script>
 </body>
 
 </html>

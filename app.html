@@ -249,5 +249,29 @@
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/g5368cx-0bA5VbH0z8v2Dq+kRND0i0M1vT7vA492oB0qB1K6B6v0F3pM0nZ6F2J9Z2m0Z0P2q4lG2X9m3Ew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".app-card"), {
+            max: 10,
+            speed: 400,
+            scale: 1.03,
+            glare: true,
+            "max-glare": 0.15
+        });
+    </script>
+    <!-- Lenis for smooth momentum scrolling -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+        
+        // Prevent Lenis from moving the background and correctly route scrolling to the gallery modal
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.setAttribute('data-lenis-prevent', '');
+            modal.addEventListener('show.bs.modal', () => lenis.stop());
+            modal.addEventListener('hidden.bs.modal', () => lenis.start());
+        });
+    </script>
 </body>
 </html>

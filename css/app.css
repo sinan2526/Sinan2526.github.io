@@ -80,9 +80,9 @@ body {
 
 /* Hover effects for User Experience */
 .app-item:hover .app-card {
-    transform: translateY(-12px) scale(1.02);
+    transform: perspective(1200px) translateY(-12px) rotateX(8deg) rotateY(-6deg) scale(1.03);
     /* Enhancing shadow to create a lifting effect with a slight golden glow */
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.8), 0 0 20px rgba(228, 187, 110, 0.15);
+    box-shadow: -15px 25px 45px rgba(0, 0, 0, 0.8), 0 0 30px rgba(228, 187, 110, 0.25);
     border-color: #e4bb6e; /* Border brightens up */
 }
 
